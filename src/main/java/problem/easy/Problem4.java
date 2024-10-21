@@ -14,6 +14,10 @@ public class Problem4 {
      */
     public static OptionalInt findMax(List<Integer> numbers) {
         // 여기에 코드 작성
-        return OptionalInt.empty();
+        return OptionalInt.of(
+                numbers.stream()
+                        .max(Integer::compare)
+                        .get()
+        );
     }
 }
